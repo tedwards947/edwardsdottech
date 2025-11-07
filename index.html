@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Edwards Industries, LLC</title>
+    <meta name="description" content="Edwards Industries, LLC" />
+    <style>
+        :root{
+            --bg:#0f1724;
+            --card:#0b1220;
+            --accent:#4f46e5;
+            --muted:#94a3b8;
+            --glass: rgba(255,255,255,0.04);
+            --radius:12px;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: linear-gradient(180deg, #071026 0%, #07142b 60%), var(--bg);
+            color:#e6eef8;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            line-height:1.4;
+        }
+        .container{max-width:1100px;margin:0 auto;padding:28px;}
+        header{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:16px;
+            padding:8px 0;
+        }
+        .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+        .logo{
+            width:44px;height:44px;border-radius:10px;
+            background:linear-gradient(135deg,var(--accent),#06b6d4);
+            display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:white;
+            box-shadow:0 6px 18px rgba(79,70,229,0.18);
+        }
+        nav{display:flex;gap:16px;align-items:center}
+        nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+        nav a:hover{color:white;background:var(--glass)}
+        .nav-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px;border-radius:8px;color:var(--muted)}
+        .hero{
+            display:grid;
+            grid-template-columns:1fr 420px;
+            gap:28px;
+            align-items:center;
+            padding:56px 0;
+        }
+        .hero .eyebrow{color:var(--muted);font-weight:600;margin-bottom:12px}
+        h1{font-size:clamp(28px,4.6vw,44px);margin:0 0 12px}
+        p.lead{color:var(--muted);margin:0 0 20px}
+        .cta{display:flex;gap:12px;flex-wrap:wrap}
+        .btn{
+            display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;border:0;cursor:pointer;
+            font-weight:700;color:white;background:linear-gradient(90deg,var(--accent),#06b6d4);
+            text-decoration:none;
+        }
+        .btn.secondary{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04)}
+        .card{
+            background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            padding:20px;border-radius:var(--radius);box-shadow:0 6px 24px rgba(2,6,23,0.6);
+            color:var(--muted);
+        }
+        .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+        .feature{background:var(--card);padding:18px;border-radius:12px}
+        footer{padding:40px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+        .small{font-size:13px}
+        @media (max-width:920px){
+            .hero{grid-template-columns:1fr; padding:36px 0;}
+            .feature-grid{grid-template-columns:repeat(2,1fr)}
+        }
+        @media (max-width:640px){
+            nav{display:none}
+            .nav-toggle{display:inline-flex}
+            .feature-grid{grid-template-columns:1fr}
+        }
+        /* simple focus styles */
+        a:focus, button:focus {outline:3px solid rgba(79,70,229,0.18);outline-offset:3px}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a class="brand" href="#">
+                <div class="logo" aria-hidden="true">E</div>
+                <div>
+                    <div style="font-weight:800">Edwards Industries, LLC</div>
+                    <div style="font-size:12px;color:var(--muted);margin-top:2px">Innovative Solutions for Industrial Problems</div>
+                </div>
+            </a>
+
+            <nav aria-label="Primary navigation">
+                <a href="/">Home</a>
+                <!-- <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a> -->
+            </nav>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+        </header>
+
+        <main>
+            <section class="hero" aria-labelledby="hero-heading">
+                <div>
+                    <div class="eyebrow">Coming Soon</div>
+                    <h1 id="hero-heading">Wait and see!</h1>
+                    <p class="lead">Cool things are coming soon! Let's see if I can make this all work...</p>
+                    <div class="cta">
+                        <a class="btn" href="#contact">Get started</a>
+                        <a class="btn secondary" href="#features">Explore features</a>
+                    </div>
+
+                    <div class="feature-grid" style="margin-top:28px;">
+                        <div class="feature">
+                            <strong>Landing Page</strong>
+                            <div style="margin-top:8px;font-size:13px;color:var(--muted)">Simple landing page for now.</div>
+                        </div>
+                        <div class="feature">
+                            <strong>Baby Steps</strong>
+                            <div style="margin-top:8px;font-size:13px;color:var(--muted)">But this is an important first step!</div>
+                        </div>
+                        <div class="feature">
+                            <strong>Just Wait</strong>
+                            <div style="margin-top:8px;font-size:13px;color:var(--muted)">Placeholder for more information to come.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="card" aria-label="Sign up">
+                    <h3 style="margin:0 0 8px">Join early access</h3>
+                    <p class="small" style="margin:0 0 14px;color:var(--muted)">Sign up to receive updates.</p>
+                    <form id="signupForm">
+                        <label for="email" class="small" style="display:block;margin-bottom:8px">Email address</label>
+                        <input id="email" name="email" type="email" required placeholder="you@example.com"
+                            style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-bottom:12px" value="Coming Soon..." disabled="true" />
+                        <button class="btn" type="submit" style="width:100%;" disabled="true">Join the list</button>
+                    </form>
+                </aside>
+            </section>
+
+            <section id="features" style="padding:28px 0">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+                    <!-- <h2 style="margin:0">Features</h2> -->
+                    <p style="margin:0;color:var(--muted)">More information to come.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="small">© <span id="year">2025</span> Edwards Industries, LLC</div>
+            <!-- <div class="small" id="contact">
+                <a href="mailto:hello@edwardsdot.tech" style="color:var(--muted);text-decoration:none">Contact</a>
+            </div> -->
+        </footer>
+    </div>
+
+    <!-- Mobile nav menu (in DOM, toggled by JS) -->
+    <div id="mobileMenu" style="display:none;position:fixed;inset:60px 16px auto 16px;border-radius:12px;padding:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 20px 40px rgba(2,6,23,0.6);">
+        <nav aria-label="Mobile">
+            <a href="#features" style="display:block;padding:10px;border-radius:8px;color:var(--muted)">Features</a>
+            <a href="#pricing" style="display:block;padding:10px;border-radius:8px;color:var(--muted)">Pricing</a>
+            <a href="#contact" style="display:block;padding:10px;border-radius:8px;color:var(--muted)">Contact</a>
+        </nav>
+    </div>
+
+    <script>
+        // Basic UI interactions: mobile menu, smooth scroll, form handler, year
+        (function(){
+            const navToggle = document.getElementById('navToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            navToggle.addEventListener('click', () => {
+                const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', String(!expanded));
+                mobileMenu.style.display = expanded ? 'none' : 'block';
+            });
+
+            // Smooth scroll for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(a=>{
+                a.addEventListener('click', (e)=>{
+                    const targetId = a.getAttribute('href').slice(1);
+                    const target = document.getElementById(targetId);
+                    if(target){
+                        e.preventDefault();
+                        target.scrollIntoView({behavior:'smooth',block:'start'});
+                        // close mobile menu on selection
+                        mobileMenu.style.display = 'none';
+                        navToggle.setAttribute('aria-expanded','false');
+                    }
+                });
+            });
+
+            // Simple signup form handler
+            const form = document.getElementById('signupForm');
+            form.addEventListener('submit', (e)=>{
+                e.preventDefault();
+                const email = form.email.value.trim();
+                if(!email) return alert('Please enter an email address.');
+                // Placeholder: replace with real API call
+                form.querySelector('button').disabled = true;
+                form.querySelector('button').textContent = 'Joined ✓';
+                setTimeout(()=> {
+                    form.reset();
+                    form.querySelector('button').disabled = false;
+                    form.querySelector('button').textContent = 'Join the list';
+                    alert('Thanks! We added ' + email + ' to the list (demo).');
+                }, 900);
+            });
+
+            // Set current year
+            document.getElementById('year').textContent = new Date().getFullYear();
+        })();
+    </script>
+</body>
+</html>
