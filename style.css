@@ -211,6 +211,11 @@ nav.main-nav a.active {
     font-size: 16px
 }
 
+.about .emoji {
+    font-size: 20px;
+    line-height: 1;
+}
+
 /* section heading */
 .section-head {
     padding-top: 20px;
