@@ -401,6 +401,38 @@ nav.main-nav a.active {
     color: var(--accent)
 }
 
+/* GitHub repo link (project pages) */
+.repo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .02em;
+    text-decoration: none;
+    color: var(--paper);
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 9px 16px;
+    border-radius: 999px;
+    margin-top: 16px;
+    transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+
+.repo-link:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.repo-link svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
 /* CV page */
 .cv-header {
     padding: 48px 0 8px;

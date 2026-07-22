@@ -52,6 +52,14 @@ served automatically.
   next to the title via a `.title-row` wrapper (flex row, gap, wraps h1/h3 +
   tag together) on both the homepage cards and each project's own page.
   Keep these two in sync when a project's status changes.
+- `.repo-link` — dark pill CTA button (GitHub mark SVG + "See this project
+  on GitHub") for linking out to a project's GitHub repo. Most hobby
+  projects will eventually have one. Place it in `.project-hero`, right
+  after the `.lead` subtitle paragraph — not buried in `.project-body` —
+  so it reads as a prominent CTA near the title rather than a plain text
+  link at the bottom. See `projects/nitrollm/index.html` for the reference
+  markup (inline SVG + `target="_blank" rel="noopener"`). Only add this to
+  a project page once there's a real repo URL — don't invent one.
 
 ## Image handling patterns
 
