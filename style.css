@@ -473,6 +473,54 @@ nav.main-nav a.active {
     font-size: 12px
 }
 
+/* title + status tag */
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.title-row h1,
+.title-row h3 {
+    margin: 0;
+}
+
+.status-tag {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--paper-alt);
+    color: var(--ink-soft);
+    white-space: nowrap;
+}
+
+.status-tag.status-done {
+    background: rgba(58, 138, 93, 0.12);
+    border-color: #3a8a5d;
+    color: #2c6a48;
+}
+
+.status-tag.status-wip {
+    background: rgba(176, 125, 23, 0.14);
+    border-color: #b07d17;
+    color: #8f6512;
+}
+
+.status-tag.status-paused {
+    background: var(--paper-alt);
+    border-color: var(--line);
+    color: var(--ink-soft);
+}
+
 /* footer */
 .site-footer {
     border-top: 1px solid var(--line);
