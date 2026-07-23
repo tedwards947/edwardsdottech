@@ -78,6 +78,23 @@ everywhere:
   .project-media`): fixed 4:3 boxes, `object-fit: contain` — keeps mixed
   orientation pairs the same height and aligned as a row.
 
+### Captions
+
+Wrap any `.project-media` or `.video-embed` block in `<figure class="media-figure">`
+with a `<figcaption>` to add a caption — small mono text, centered, muted color,
+consistent with the rest of the site's label styling. Works standalone or inside
+a `.gallery-row` cell. Example (see `projects/nitrollm/index.html` for a live one):
+
+```html
+<figure class="media-figure">
+    <div class="project-media"><img src="images/total.jpeg" /></div>
+    <figcaption>The whole setup, mid-build.</figcaption>
+</figure>
+```
+
+Don't wrap `.project-media`/`.video-embed` in `<figure>` unless there's an actual
+caption to add — no need to add empty figure wrappers everywhere.
+
 ## Video embeds
 
 - Normal case: YouTube unlisted/public videos via `.video-embed > iframe`

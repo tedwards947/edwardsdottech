@@ -412,6 +412,29 @@ nav.main-nav a.active {
     background: #000;
 }
 
+/* photo/video captions */
+.media-figure {
+    margin: 0;
+}
+
+.media-figure .project-media,
+.media-figure .video-embed {
+    margin-bottom: 0;
+}
+
+.media-figure figcaption {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-align: center;
+    margin: 8px 0 20px;
+    letter-spacing: .02em;
+}
+
+.gallery-row .media-figure figcaption {
+    margin: 8px 0 0;
+}
+
 .project-body {
     padding: 16px 0 40px
 }
